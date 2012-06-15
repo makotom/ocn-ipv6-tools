@@ -1,0 +1,30 @@
+ocn-ipv6-tools - Helper tools to use OCN IPv6
+Copyright (C) 2012 Makoto Mizukami.
+
+= Dependency =
+This tool requires the following softwares:
+* xl2tpd
+If you want to connect OCN IPv6 over SSH, you also need the following softwares:
+* ssh
+* nc
+
+= Configuration =
+Some files need to be configured by setting proper values for variables. The variables keep the name of Connection Server you want to use (LNS), Authentication ID for OCN (AID), and the name of SSH remote host (SSH_HOST), in case you want to use OCN IPv6 over SSH.
+
+= Preparation =
+You have to save your Authentication ID and password for OCN in /etc/ppp/chap-secrets .
+You may have to review firewall configurations before start using it.
+
+= Usage (for normal use) =
+Run up.sh as root.
+
+= Usage (for over SSH) =
+1. Run pipe_ssh.sh .
+2. At the remote host, run pipe_remote.sh as root. This means that you have to install pipe_remote and dependencies prior to this step.
+3. Open another terminal and run tunnel.sh as root at the local side.
+
+= down.sh ? =
+down.sh will try to disconnect from OCN IPv6 gracefully.
+
+= Developer Information =
+See http://makotom.org/ .
