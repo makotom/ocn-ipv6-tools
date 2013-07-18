@@ -26,7 +26,7 @@ usepeerdns\n\
 user $AID"
 
 xl2tpd_conf="[global]\n\
-auth file = /etc/ppp/chap-secret\n\
+auth file = /etc/ppp/chap-secrets\n\
 \n\
 [lac ocn-ipv6]\n\
 lns = $LNS\n\
