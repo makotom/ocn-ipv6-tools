@@ -3,11 +3,8 @@
 LNS=
 AID=
 
-ping=-1
-while [ $ping -ne 0 ]
+until ping -c 1 $LNS > /dev/null 2>&1
 do
-	ping -c 1 $LNS > /dev/null 2>&1
-	ping=$?
 	sleep 1
 done
 
